@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+
+  /* Better input styles */
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  textarea {
+    @apply transition-shadow duration-150;
+  }
+
+  /* Remove number input spinners */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* Custom date input styling */
+  input[type="date"] {
+    @apply appearance-none;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    @apply opacity-50 hover:opacity-100 cursor-pointer;
+  }
+}
